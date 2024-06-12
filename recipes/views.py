@@ -8,8 +8,10 @@ from django.http import HttpResponse
 def home(request):
     return HttpResponse("Olá, mundo! 2323232")
 
+
 def contato(request):
     return HttpResponse("Contato")
+
 
 def sobre(request):
     return HttpResponse("Sobre")
