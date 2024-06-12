@@ -6,7 +6,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("Olá, mundo! 2323232")
+    return render(request, 'index.html')
 
 
 def contato(request):
