@@ -19,21 +19,8 @@ from django.urls import path
 from django.http import HttpResponse
 from recipes.views import home, contato, sobre
 
-
-
-
-
-
-
-
-def _sobre(request):
-    return HttpResponse("Sobre")
-
-
-    
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
     path('contato/', contato),
     path('', home),
     path('sobre/', sobre),
