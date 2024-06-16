@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css"
         integrity="sha512-4wfcoXlib1Aq0mUtsLLM74SZtmB73VHTafZAvxIp/Wk9u1PpIsrfmTvK0+yKetghCL8SHlZbMyEcV8Z21v42UQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --color-primary: #269fe6;
@@ -59,6 +63,15 @@
             box-sizing: border-box;
         }
 
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-headings);
+        }
+
         html {
             font-size: 62.5%;
         }
@@ -86,7 +99,16 @@
             text-decoration: none;
             display: flex;
             flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+            width: fit-content;
+            margin: 0 auto;
 
+        }
+
+        .main-logo-icon {
+            margin-right: 2rem;
         }
     </style>
 </head>
