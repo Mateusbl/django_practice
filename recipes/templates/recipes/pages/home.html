@@ -3,12 +3,9 @@
         {% include "recipes/partials/header.html" %}
         {%include "recipes/partials/search.html"%}
         <main class="main-content-list">
+            {% for recipe in recipes %}
             {% include "recipes/partials/recipe.html" %}
-            {% include "recipes/partials/recipe.html" %}
-            {% include "recipes/partials/recipe.html" %}
-            {% include "recipes/partials/recipe.html" %}
-            {% include "recipes/partials/recipe.html" %}
-         
+            {% endfor %}
            
             
             
