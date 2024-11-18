@@ -1,17 +1,17 @@
-<DOCTYPE html>
-    <title>{% block title %}{% endblock title %}</title>
-{% include "recipes/partials/head.html" %}
+
+{% extends 'global/index.html' %}
+
+{% block title %}Home | {% endblock title %}
+
+{% block content %}
     <body>
         {% include "recipes/partials/header.html" %}
-        {%include "recipes/partials/search.html"%}
+        {% include "recipes/partials/search.html" %}
         <main class="main-content-list">
             {% for recipe in recipes %}
-            {% include "recipes/partials/recipe.html" %}
+                {% include "recipes/partials/recipe.html" %}
             {% endfor %}
-           
-            
-            
         </main>
-        {% include "recipes/partials/footer.html" %}  
+        {% include "recipes/partials/footer.html" %}
     </body>
-</html>
+{% endblock %}
