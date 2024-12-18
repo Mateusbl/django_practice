@@ -1,7 +1,7 @@
 <div class="recipe recipe-list-item">
     <div class="recipe-cover">
         <img
-            src="https://via.placeholder.com/1280x720.png/269fe6"
+            src="{{ recipe.cover.url }}"
             alt="Temporário"
         />
     </div>
@@ -16,8 +16,8 @@
         </span>
         <span class="recipe-author-item">
             <i class="fas fa-calendar-alt"></i>
-            {{ recipe.created_at|date:"d/m/Y" }} às {{
-            recipe.created_at|date:"H:i" }}
+            {{ recipe.created_at|date:"d/m/Y" }} às
+            {{recipe.created_at|date:"H:i" }}
         </span>
         <span class="recipe-author-item">
             <a href="/recipes/category/cafe-da-manha/">
@@ -59,4 +59,5 @@
             <span>ver mais...</span>
         </a>
     </footer>
+    {% endif %}
 </div>
