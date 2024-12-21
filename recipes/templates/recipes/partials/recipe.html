@@ -8,7 +8,9 @@
         </a>
     </div>
     <div class="recipe-title-container">
-        <h2 class="recipe-title">{{ recipe.title }}</h2>
+        <a href="{% url 'recipe-recipe' recipe.id %}">
+            <h2 class="recipe-title">{{ recipe.title }}</h2>
+        </a>    
     </div>
 
     <div class="recipe-author">
@@ -55,7 +57,7 @@
     <footer class="recipe-footer">
         <a
             class="recipe-read-more button button-dark button-full-width"
-            href="/recipes/3/"
+            href="{% url "recipe-recipe" recipe.id %}"
         >
             <i class="fas fa-eye"></i>
             <span>ver mais...</span>
