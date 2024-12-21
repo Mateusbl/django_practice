@@ -254,6 +254,9 @@ h6 {
   color: var(--color-white);
   padding: var(--spacing-gutter-large);
 }
+.preparation-steps{
+  padding: var(--spacing-gutter-medium);
+}
 
 .main-footer a {
   color: var(--color-white);
