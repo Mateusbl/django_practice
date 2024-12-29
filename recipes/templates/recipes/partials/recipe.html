@@ -17,9 +17,10 @@
             <span class="recipe-author-item">
                 <i class="fas fa-user"></i>
                 {% if recipe.author.first_name %}
-              <span>  {{ recipe.author.first_name }} {{ recipe.author.last_name }}</span>
+                    {{ recipe.author.first_name }} {{ recipe.author.last_name }}
                 {% else %}
-                  <span>  {{ recipe.author.username }}</span>
+                    {{ recipe.author.username }}
+            </span>
             {% endif %}
             <span class="recipe-author-item">
                 <i class="fas fa-calendar-alt"></i>
