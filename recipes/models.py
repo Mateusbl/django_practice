@@ -17,7 +17,7 @@ class Recipe(models.Model):
     )
     slug = models.SlugField()
     preparation_time = models.IntegerField()
-    preaparation_time_unit = models.CharField(
+    preparation_time_unit = models.CharField(
         max_length=10,
     )
     servings = models.IntegerField()
