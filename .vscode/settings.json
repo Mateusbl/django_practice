@@ -2,5 +2,6 @@
     "python.analysis.typeCheckingMode": "basic",
     "projectManager.git.baseFolders": [
         "j"
-    ]
+    ],
+    "codeQL.createQuery.qlPackLocation": "/home/mateus/faculdade/django_practice"
 }
