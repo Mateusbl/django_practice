@@ -3,9 +3,9 @@ from utils.recipes.factory import make_recipe
 from recipes.models import Recipe
 
 
-recipes = Recipe.objects.all().order_by('-id')
 
 def home(request):
+    recipes = Recipe.objects.all()
     return render(request, 'recipes/pages/home.html', context={
         'recipes': recipes,
     })
