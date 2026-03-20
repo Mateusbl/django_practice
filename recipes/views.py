@@ -32,7 +32,7 @@ def category(request, category_id):
     ).order_by("-created_at")
     return render(
         request,
-        "recipes/pages/home.html",
+        "recipes/pages/category.html",
         context={
             "recipes": recipes,
         },
