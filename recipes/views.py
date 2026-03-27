@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from utils.recipes.factory import make_recipe
-from django.http import HttpResponse
+from django.http import Http404
 from recipes.models import Recipe
 
 
@@ -30,10 +30,9 @@ def category(request, category_id):
     recipes = Recipe.objects.filter(
         category__id=category_id, is_published=True
     ).order_by("-created_at")
-
     first_recipe = recipes.first()
     if first_recipe is None:
-        return HttpResponse("Not found", status=404)
+        raise Http404("Not found")
 
     return render(
         request,
