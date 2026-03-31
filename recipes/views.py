@@ -17,13 +17,25 @@ def home(request):
 
 
 def recipe(request, id):
-    recipe = Recipe.objects.filter(pk=id, is_published=True).order_by("-id").first
+    recipe = (
+        Recipe.objects.filter(
+            pk=id,
+            is_published=True,
+        )
+        .order_by("-id")
+        .first()
+    )
+
+    if recipe is None:
+        raise Http404()
+
     return render(
         request,
         "recipes/pages/recipe-view.html",
         context={
             "recipe": recipe,
             "is_detail_page": True,
+            "preparation_steps_is_html": recipe.preparation_steps_is_html,
         },
     )
 
