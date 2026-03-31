@@ -52,6 +52,6 @@ def category(request, category_id):
         "recipes/pages/category.html",
         context={
             "recipes": recipes,
-            "title": f"{first_recipe.category.name} - Category | Django Recipes",
+            "title": f"{recipes[0].category.name} - Category | Django Recipes",
         },
     )
